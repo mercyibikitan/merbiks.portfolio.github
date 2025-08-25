@@ -4,27 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Merbiks • Portfolio</title>
-  <meta name="description" content="Merbiks — Student developer & faith-driven creator. Projects, skills, and contact." />
-
+  <meta name="description" content="Merbiks — Student developer & faith‑driven creator. Projects, skills, and contact." />
   <!-- Favicon Links -->
   <link rel="icon" type="image/png" sizes="16x16" href="favicon_16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon_32x32.png">
   <link rel="icon" type="image/png" sizes="48x48" href="favicon_48x48.png">
   <link rel="icon" type="image/png" sizes="64x64" href="favicon_64x64.png">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* --- Styles remain exactly as you wrote them --- */
-    :root {
-      --bg: #0b1020;
+    :root{
+      --bg: #0b1020; /* deep night */
       --card: #121733;
       --muted: #9aa4b2;
       --text: #f5f7fb;
-      --accent: #7c5cff;
-      --accent-2: #21d4fd;
+      --accent: #7c5cff; /* soft purple */
+      --accent-2:#21d4fd; /* aqua */
       --ring: rgba(124,92,255,.35);
     }
     *{box-sizing:border-box}
@@ -35,6 +32,7 @@
          color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
     a{color:inherit;text-decoration:none}
     .container{width:min(1100px, 92%);margin:0 auto}
+    /* Navbar */
     .nav{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.6);backdrop-filter: blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
     .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
@@ -43,6 +41,7 @@
     .links{display:flex;gap:22px}
     .links a{opacity:.85}
     .links a:hover{opacity:1}
+    /* Hero */
     .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding:72px 0 40px}
     .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);font-size:12px;color:var(--muted)}
     h1{font-size:clamp(28px, 5vw, 48px);line-height:1.1;margin:14px 0 12px}
@@ -60,17 +59,26 @@
     .pill small{color:#9fb0ff}
     .mood{display:flex;gap:6px;flex-wrap:wrap}
     .mood button{background:#11183e;border:1px solid rgba(255,255,255,.08);color:#e9ecff;border-radius:999px;padding:6px 10px;font-size:13px}
+
+    /* Sections */
     section{padding:68px 0}
     .section-title{font-size:26px;margin:0 0 16px}
     .muted{color:var(--muted)}
+
+    /* Projects */
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .project{padding:16px}
     .project h3{margin:8px 0 6px}
     .project p{color:var(--muted);font-size:14px}
+
+    /* Contact */
     .contact{display:grid;grid-template-columns:1fr 1fr;gap:22px}
     .input, textarea{width:100%;background:#0f1537;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:12px 14px;color:#fff}
     textarea{min-height:120px;resize:vertical}
+
+    /* Footer */
     footer{padding:24px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.06)}
+
     @media (max-width: 900px){
       .hero{grid-template-columns:1fr}
       .grid{grid-template-columns:1fr 1fr}
@@ -83,11 +91,136 @@
   </style>
 </head>
 <body>
-  <!-- NAVIGATION, HERO, SECTIONS, CONTACT, FOOTER remain exactly as in your original code -->
-  <!-- Paste the rest of your body content here without changing -->
-  
+  <nav class="nav">
+    <div class="container wrap">
+      <a class="brand" href="#home">
+        <div class="logo"><span>☺</span></div>
+        <span>MerbiksCodes</span>
+      </a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home" class="hero container">
+    <div>
+      <span class="badge"> MerbiksCodes • Student Edition</span>
+      <h1>Hello, I’m <span style="background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent">MerbiksCodes (MercyIbikitan)</span> — student developer & faith‑driven creator.</h1>
+      <p class="subtitle">I build simple, kind tools for students — like <b>Scripture Mood Match</b>, a daily journal, and prayer reminders. I love clean UI and helpful products.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See Projects</a>
+        <a class="btn" href="#contact">Contact Me</a>
+      </div>
+      <div class="stats">
+        <span>🎯 Focus: HTML • CSS • JS</span>
+        <span>📍 Nigeria</span>
+      </div>
+    </div>
+
+    <div class="card preview">
+      <div class="phone">
+        <div class="glow" aria-hidden="true"></div>
+        <div class="screen">
+          <div class="pill"><strong>Scripture Mood Match</strong><small>Beta</small></div>
+          <div class="mood">
+            <button>😔 Stressed</button>
+            <button>😰 Anxious</button>
+            <button>💪 Hopeful</button>
+            <button>😁 Joyful</button>
+          </div>
+          <div class="pill">
+            <div>
+              <div style="font-weight:600">Today’s Verse</div>
+              <small>Isaiah 41:10</small>
+            </div>
+            <div>😊</div>
+          </div>
+          <div class="card" style="padding:12px;background:#0f1537;border:1px solid rgba(255,255,255,.08);border-radius:14px">
+            <p style="margin:0 0 6px">“Fear not, for I am with you… I will strengthen you and help you.”</p>
+            <small class="muted">— Encouragement: Breathe. Pray for 60 seconds. You’re not alone.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="container">
+    <h2 class="section-title">About</h2>
+    <p class="muted">I’m a beginner‑to‑intermediate frontend developer learning by building. I enjoy turning ideas into useful, encouraging apps for students. My goal this year is to ship <b>3 mini apps</b> and keep growing in faith and skill.</p>
+    <ul class="muted">
+      <li>✅ HTML, CSS, basic JavaScript</li>
+      <li>✅ Deploying with Surge / GitHub Pages</li>
+      <li>🎯 Learning: python, java+ localStorage, simple APIs</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="container">
+    <h2 class="section-title">Projects</h2>
+    <div class="grid">
+      <article class="card project">
+        <small class="muted">#001</small>
+        <h3>Scripture Mood Match</h3>
+        <p>Pick a mood → get a matching verse + encouragement. Saves favorites in your browser.</p>
+        <a class="btn" href="#" onclick="alert('Demo coming soon ✨')">Live Demo</a>
+      </article>
+      <article class="card project">
+        <small class="muted">#002</small>
+        <h3>Daily Thoughts Journal</h3>
+        <p>Student‑friendly journaling with gratitude prompts and streak reminders.</p>
+        <a class="btn" href="#" onclick="alert('Demo coming soon ✨')">Live Demo</a>
+      </article>
+      <article class="card project">
+        <small class="muted">#003</small>
+        <h3>Prayer Reminders</h3>
+        <p>Set morning/noon/night reminders to pause and pray for 60 seconds.</p>
+        <a class="btn" href="#" onclick="alert('Demo coming soon ✨')">Live Demo</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2 class="section-title">Contact</h2>
+    <p class="muted">Want to collaborate or say hello? Send a message below.</p>
+    <div class="contact">
+      <form onsubmit="sendMsg(event)" class="card" style="padding:16px">
+        <input class="input" id="name" placeholder="Your name" required>
+        <div style="height:10px"></div>
+        <input class="input" id="email" placeholder="Your email" required>
+        <div style="height:10px"></div>
+        <textarea id="message" placeholder="Your message"></textarea>
+        <div style="height:14px"></div>
+        <button class="btn primary" type="submit">Send Message</button>
+      </form>
+      <div class="card" style="padding:16px">
+       
+        <p><a href="mailto:ibikitanmercy@gmail.com">ibikitanmercy@gmail.com</p>
+        <p><a href="https://wa.me/2347087967709" target="_blank" rel="noreferrer">WhatsApp: +234 7087967709</a></p>
+        <p>Instagram: <a href="https://instagram.com/yourusername" target="_blank">She_is_merbiks</a></p>
+
+
+        
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <small class="muted">© <span id="year"></span> Crafted by MerbiksCodes 😊</small>
+      <div style="display:flex;gap:14px">
+        <a href="#home">Top ↑</a>
+        <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
   <script>
+    // Set year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Fake contact handler
     function sendMsg(e){
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
