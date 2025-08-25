@@ -24,6 +24,16 @@
       --accent-2:#21d4fd; /* aqua */
       --ring: rgba(124,92,255,.35);
     }
+    .profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4f46e5;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;background:radial-gradient(1200px 800px at 10% -10%, rgba(124,92,255,.15), transparent),
@@ -91,6 +101,8 @@
   </style>
 </head>
 <body>
+  <img src="https://i.imgur.com/yourimage.png" alt="Mercy Ibikitan" class="profile-image">
+
   <nav class="nav">
     <div class="container wrap">
       <a class="brand" href="#home">
